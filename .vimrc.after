@@ -1,0 +1,9 @@
+" color
+colorscheme Tomorrow-Night-Bright
+" display the current mode
+set showmode
+" a tab is 4 spaces
+set tabstop=2
+" autoindent is 4 spaces
+set shiftwidth=2
+

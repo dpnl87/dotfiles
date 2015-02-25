@@ -6,4 +6,7 @@ set showmode
 set tabstop=2
 " autoindent is 4 spaces
 set shiftwidth=2
-
+" use Source Code Pro font
+set anti enc=utf-8
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+let g:airline_powerline_fonts=1

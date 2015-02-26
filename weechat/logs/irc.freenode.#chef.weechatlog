@@ -1,0 +1,496 @@
+2015-02-25 16:03:05	—>	dpaulus has joined #chef
+2015-02-25 16:03:05	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 16:03:05	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 16:03:05	--	Channel #chef: 634 nicks (21 ops, 1 voice, 612 normals)
+2015-02-25 16:03:05	--	URL for #chef: http://www.opscode.com
+2015-02-25 16:03:07	<—	dude051 has quit (Ping timeout: 255 seconds)
+2015-02-25 16:03:07	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 16:04:24	<—	Gazzonyx has quit (Ping timeout: 245 seconds)
+2015-02-25 16:05:31	—>	duallain has joined #chef
+2015-02-25 16:06:32	—>	dude051 has joined #chef
+2015-02-25 16:06:42	<—	dude051 has quit (Client Quit)
+2015-02-25 16:10:03	—>	Nick_ZWG has joined #chef
+2015-02-25 16:10:53	—>	tmichael has joined #chef
+2015-02-25 16:10:53	—>	Jan_Garaj3 has joined #chef
+2015-02-25 16:11:25	—>	spuder has joined #chef
+2015-02-25 16:12:01	—>	dude051 has joined #chef
+2015-02-25 16:13:28	—>	RealMattHatch has joined #chef
+2015-02-25 16:14:28	Nick_ZWG	Every time I run chef-client on this test VM, I get a 404 error as part of it, but it seems to work.  I checked the debug output, and I'm still not sure why I'm getting that 404 and what it means - https://gist.github.com/nmcspadden/0e4f0fb253bd77443b5c
+2015-02-25 16:15:23	—>	naterator has joined #chef
+2015-02-25 16:15:28	—>	Gnut has joined #chef
+2015-02-25 16:15:36	—>	mattray has joined #chef
+2015-02-25 16:15:36	--	Mode #chef [+o mattray] by ChanServ
+2015-02-25 16:15:58	<—	mattray has quit (Client Quit)
+2015-02-25 16:16:10	<—	Jan_Garaj3 has quit (Ping timeout: 255 seconds)
+2015-02-25 16:16:42	—>	heydrick has joined #chef
+2015-02-25 16:16:48	<—	RealMattHatch has quit (Client Quit)
+2015-02-25 16:17:15	—>	mattray has joined #chef
+2015-02-25 16:17:15	--	Mode #chef [+o mattray] by ChanServ
+2015-02-25 16:17:59	<—	ssd7 has quit (Ping timeout: 244 seconds)
+2015-02-25 16:18:04	<—	goacid has quit (Ping timeout: 252 seconds)
+2015-02-25 16:18:54	—>	switchflip has joined #chef
+2015-02-25 16:19:27	—>	rodolfojcj_ has joined #chef
+2015-02-25 16:19:55	—>	JoeNuspl has joined #chef
+2015-02-25 16:21:00	<—	iverson0881 has quit (Ping timeout: 252 seconds)
+2015-02-25 16:21:13	<—	StefanSch has quit (Ping timeout: 256 seconds)
+2015-02-25 16:21:50	<—	heydrick has quit (Quit: Leaving.)
+2015-02-25 16:22:21	<—	alterm4nn has quit (Ping timeout: 256 seconds)
+2015-02-25 16:22:30	—>	heydrick has joined #chef
+2015-02-25 16:23:12	<—	tmichael has quit (Quit: Textual IRC Client: www.textualapp.com)
+2015-02-25 16:23:18	<—	heydrick has quit (Client Quit)
+2015-02-25 16:24:08	—>	fritz09 has joined #chef
+2015-02-25 16:24:26	—>	achanda has joined #chef
+2015-02-25 16:24:27	—>	ssd7 has joined #chef
+2015-02-25 16:24:27	--	Mode #chef [+o ssd7] by ChanServ
+2015-02-25 16:25:15	<—	epcim has quit (Ping timeout: 252 seconds)
+2015-02-25 16:26:10	—>	jdossey has joined #chef
+2015-02-25 16:27:02	—>	lavaman has joined #chef
+2015-02-25 16:28:37	<—	rodolfojcj_ has quit (Ping timeout: 245 seconds)
+2015-02-25 16:28:43	—>	lavaman1 has joined #chef
+2015-02-25 16:28:56	<—	lavaman has quit (Client Quit)
+2015-02-25 16:28:59	<—	jbz_ has quit (Ping timeout: 245 seconds)
+2015-02-25 16:29:05	—>	arukaen has joined #chef
+2015-02-25 16:29:40	arukaen	Anyone out there using the database cookbook & postgres?
+2015-02-25 16:30:14	arukaen	Having an issue when I set my postgres password as an md5 that it fails when using that password to create a user or a database
+2015-02-25 16:30:37	—>	cherph has joined #chef
+2015-02-25 16:31:40	—>	jbz has joined #chef
+2015-02-25 16:32:28	<—	cherph has quit (Client Quit)
+2015-02-25 16:32:57	<—	lavaman1 has quit (Ping timeout: 252 seconds)
+2015-02-25 16:33:30	—>	julian-delphiki has joined #chef
+2015-02-25 16:33:31	<—	julian-delphiki has quit (Changing host)
+2015-02-25 16:33:31	—>	julian-delphiki has joined #chef
+2015-02-25 16:34:15	<—	dfinninger has quit (Remote host closed the connection)
+2015-02-25 16:35:59	—>	dpaulus has joined #chef
+2015-02-25 16:35:59	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 16:35:59	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 16:36:00	--	Channel #chef: 640 nicks (22 ops, 1 voice, 617 normals)
+2015-02-25 16:36:00	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 16:36:00	--	URL for #chef: http://www.opscode.com
+2015-02-25 21:50:57	—>	dpaulus_ has joined #chef
+2015-02-25 21:50:57	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 21:50:57	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 21:50:57	--	Channel #chef: 668 nicks (21 ops, 1 voice, 646 normals)
+2015-02-25 21:50:57	--	URL for #chef: http://www.opscode.com
+2015-02-25 21:50:57	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 21:50:59	<—	dpaulus has quit (Quit: Textual IRC Client: www.textualapp.com)
+2015-02-25 21:51:02	—>	commmmodo has joined #chef
+2015-02-25 21:51:13	—>	tomfoolry__ has joined #chef
+2015-02-25 21:52:26	qurve	kitchen is fantastic though, first time using it.
+2015-02-25 21:52:29	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 21:53:03	—>	tomfoolry__ has joined #chef
+2015-02-25 21:53:25	@cheeseplus	qurve: it is the bees knees
+2015-02-25 21:53:30	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 21:53:59	<—	Gazzonyx has quit (Ping timeout: 245 seconds)
+2015-02-25 21:54:02	—>	tomfoolry__ has joined #chef
+2015-02-25 21:54:30	<—	fedesilva has quit (Remote host closed the connection)
+2015-02-25 21:54:39	—>	Gazzonyx has joined #chef
+2015-02-25 21:54:45	<—	svparijs has quit (Remote host closed the connection)
+2015-02-25 21:54:46	qurve	Accurate. All of the knees of all of the bees.
+2015-02-25 21:54:50	<—	aldarsior has quit (Quit: aldarsior)
+2015-02-25 21:54:55	—>	nomizzz has joined #chef
+2015-02-25 21:55:16	<—	chrisbaldauf has quit (Quit: Leaving.)
+2015-02-25 21:55:21	@cheeseplus	qurve: it's where I start the workflow of any cookbook dev now - writing serverspec tests and then building out the recipes
+2015-02-25 21:55:27	nomizzz	hi all, what does the "keyword?' method in a Chef::Provider do and where is it defined?
+2015-02-25 21:55:39	qurve	I enjoy the way serverspec tests outcome, not implementation.
+2015-02-25 21:56:01	<—	switchflip has quit
+2015-02-25 21:56:19	—>	ovaistar_ has joined #chef
+2015-02-25 21:56:19	qurve	Although it does feel as though certain things may be untested, or tested only through inference. But I might just not know it well enough yet.
+2015-02-25 21:56:24	—>	josef_ has joined #chef
+2015-02-25 21:56:38	@cheeseplus	qurve: serverspec should only comprise part of the testing
+2015-02-25 21:56:56	qurve	Eg, I know that nginx is installed, enabled, and running, I know that the config file has the right content, and I know that something is listening on 80, but that's not 100% confirmation that everything is correct.
+2015-02-25 21:57:09	qurve	Yeah, I've used chefspec as well in the past.
+2015-02-25 21:57:16	qurve	Which is a little more implementation-oriented.
+2015-02-25 21:57:27	—>	svparijs has joined #chef
+2015-02-25 21:57:31	@cheeseplus	it's very much mean to be outside->in (serverspec)
+2015-02-25 21:57:35	@cheeseplus	meant*
+2015-02-25 21:57:46	@cheeseplus	so for that I like how "dumb" it is
+2015-02-25 21:57:55	qurve	I basically see it as the difference between cucumber acceptance tests and rspec unit tests.
+2015-02-25 21:57:56	<—	hrak has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2015-02-25 21:57:58	@cheeseplus	but I'll throw some minitest in there is nice
+2015-02-25 21:58:05	qurve	In reality, I use both in my rails apps.
+2015-02-25 21:58:05	<—	ovaistariq has quit (Ping timeout: 246 seconds)
+2015-02-25 21:58:06	@cheeseplus	gah, need more coffee
+2015-02-25 21:58:09	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 21:58:27	—>	crazysix has joined #chef
+2015-02-25 21:58:32	—>	heathsno_ has joined #chef
+2015-02-25 21:58:37	<—	walker_ has quit (Ping timeout: 264 seconds)
+2015-02-25 21:58:43	—>	tomfoolry__ has joined #chef
+2015-02-25 21:58:48	<—	mxmxmx has quit (Quit: Quitte)
+2015-02-25 21:58:52	<—	svparijs has quit (Remote host closed the connection)
+2015-02-25 21:58:54	Nick_ZWG	So, when trying to remove an endpoint from the chef server, I see that there's an entry in both knife node list and knife client list
+2015-02-25 21:58:56	jcarapet	is there a way to use to knife search a list of nodes to find which ones have a specific data_bag? We are trying to replace one users keys and want to know which systems to run chef-client on
+2015-02-25 21:59:02	—>	patcon has joined #chef
+2015-02-25 21:59:06	Nick_ZWG	I've been deleting from both, but is that necessary, or is only one necessary to remove?
+2015-02-25 21:59:12	--	LeShadow is now known as LeShadowAFK
+2015-02-25 21:59:12	—>	svparijs has joined #chef
+2015-02-25 21:59:13	qurve	Can chef's deploy resource deploy a git repo from a file system.
+2015-02-25 21:59:14	Nick_ZWG	(when I want to start over with a node and regenerate the key)
+2015-02-25 21:59:18	qurve	For testing purposes.
+2015-02-25 21:59:24	—>	sauraus has joined #chef
+2015-02-25 21:59:25	<—	jedi4ever has quit (Quit: jedi4ever)
+2015-02-25 21:59:25	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 21:59:55	—>	tomfoolry__ has joined #chef
+2015-02-25 22:00:26	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:00:43	@cheeseplus	Nick_ZWG: generally you nuke both unless you have a reason to keep one or the other
+2015-02-25 22:00:56	<—	shevron has quit (Quit: Leaving...)
+2015-02-25 22:00:56	--	kangguru is now known as kangguru_away
+2015-02-25 22:00:57	—>	tomfoolry__ has joined #chef
+2015-02-25 22:01:14	Nick_ZWG	Okay, good to know/
+2015-02-25 22:01:17	—>	debudda has joined #chef
+2015-02-25 22:01:25	Nick_ZWG	Also: x509 cookbook works fine with a trusted SSL cert on the chef server
+2015-02-25 22:01:26	—>	aldarsior has joined #chef
+2015-02-25 22:01:29	<—	tier_ has quit (Ping timeout: 250 seconds)
+2015-02-25 22:01:33	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:01:39	Nick_ZWG	I could not for the life of me get it to work with a self-signed one, but when using a trusted "real" SSL cert, it works
+2015-02-25 22:01:43	<—	bmurt has quit
+2015-02-25 22:01:45	—>	walker_ has joined #chef
+2015-02-25 22:01:56	@cheeseplus	jcarapet: the data_bag doesn't belong to nodes so I'm not sure how you'd key off that
+2015-02-25 22:02:01	<—	MattJ has quit (Ping timeout: 252 seconds)
+2015-02-25 22:02:05	—>	tomfoolry__ has joined #chef
+2015-02-25 22:02:13	<—	heathsnow has quit (Ping timeout: 255 seconds)
+2015-02-25 22:02:25	<—	patcon has quit (Client Quit)
+2015-02-25 22:02:44	—>	patcon has joined #chef
+2015-02-25 22:02:48	jcarapet	cheeseplus: yeah that's what I am seeing so far. worth a shot at least.
+2015-02-25 22:03:28	—>	tgo has joined #chef
+2015-02-25 22:03:34	@cheeseplus	jcarapet: maybe searching for any run_lists that include the recipe that uses that databag?
+2015-02-25 22:03:34	tgo	Hi there...
+2015-02-25 22:03:52	<—	nomizzz has quit (Ping timeout: 246 seconds)
+2015-02-25 22:04:01	<—	jaimeg5002 has quit (Ping timeout: 255 seconds)
+2015-02-25 22:04:12	<—	lavaman has quit (Quit: Leaving.)
+2015-02-25 22:04:21	jcarapet	That's what we are trying now.
+2015-02-25 22:10:05	—>	dpaulus has joined #chef
+2015-02-25 22:10:05	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 22:10:05	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 22:10:05	--	Channel #chef: 662 nicks (21 ops, 1 voice, 640 normals)
+2015-02-25 22:10:05	--	URL for #chef: http://www.opscode.com
+2015-02-25 22:10:05	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 22:10:17	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:10:48	—>	tomfoolry__ has joined #chef
+2015-02-25 22:11:18	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:11:29	<—	batgirl has quit (Remote host closed the connection)
+2015-02-25 22:11:31	--	ezra_ is now known as ezra
+2015-02-25 22:11:39	<—	ezra has quit (Changing host)
+2015-02-25 22:11:39	—>	ezra has joined #chef
+2015-02-25 22:11:44	<—	lavaman has quit (Ping timeout: 246 seconds)
+2015-02-25 22:11:52	—>	fedesilva has joined #chef
+2015-02-25 22:11:53	—>	tomfoolry__ has joined #chef
+2015-02-25 22:12:15	<—	marsdominion has quit
+2015-02-25 22:12:20	<—	qurve has quit (Remote host closed the connection)
+2015-02-25 22:13:04	<—	rockpapergoat has quit (Remote host closed the connection)
+2015-02-25 22:13:08	gleam	use the lwrps
+2015-02-25 22:13:28	<—	jessemdavis has quit (Quit: leaving)
+2015-02-25 22:13:36	<—	pengin has quit (Remote host closed the connection)
+2015-02-25 22:13:57	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:14:10	—>	pengin has joined #chef
+2015-02-25 22:14:29	—>	tomfoolry__ has joined #chef
+2015-02-25 22:14:47	<—	pengin has quit (Read error: Connection reset by peer)
+2015-02-25 22:14:49	Azrael	coderanger: https://coderanger.net/chef-secrets/
+2015-02-25 22:14:53	Azrael	coderanger: ^ you rock
+2015-02-25 22:14:59	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:15:14	<—	heathsno_ has quit (Remote host closed the connection)
+2015-02-25 22:15:18	—>	pengin has joined #chef
+2015-02-25 22:15:26	—>	alterm4nn has joined #chef
+2015-02-25 22:15:28	Azrael	"If none of these apply, you are likely between a rock and a hard place."
+2015-02-25 22:15:29	Azrael	this is me
+2015-02-25 22:15:29	—>	tomfoolry__ has joined #chef
+2015-02-25 22:15:56	dirtygonzo	hey guys, having a weird issue.  When I try and spin up a new machine everything goes well until the chef client tries to register with my server, and i get this error.  ERROR: SSL Validation failure connecting to host: x.x.x.x - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed.  I had a very similar error early on with my knife client, however that was fixed by running 'knife fetch ssl
+2015-02-25 22:16:04	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:16:21	—>	kbarry has joined #chef
+2015-02-25 22:16:34	—>	tomfoolry__ has joined #chef
+2015-02-25 22:16:36	<—	vt102 has quit (Remote host closed the connection)
+2015-02-25 22:16:56	<—	Gazzonyx has quit (Ping timeout: 246 seconds)
+2015-02-25 22:17:06	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:17:19	dirtygonzo	and I have verified the cert on the server by running "knife check -s https://x.x.x.x"
+2015-02-25 22:17:41	—>	tomfoolry__ has joined #chef
+2015-02-25 22:17:43	<—	olivier__ has quit (Remote host closed the connection)
+2015-02-25 22:18:08	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:18:12	—>	heathsnow has joined #chef
+2015-02-25 22:18:18	<—	garrypolley has quit (Remote host closed the connection)
+2015-02-25 22:18:43	—>	tomfoolry__ has joined #chef
+2015-02-25 22:18:44	<—	Guest28714 has quit (Quit: Page closed)
+2015-02-25 22:19:01	<—	r0tha has quit (Remote host closed the connection)
+2015-02-25 22:19:05	—>	chef007 has joined #chef
+2015-02-25 22:19:20	—>	mfa298 has joined #chef
+2015-02-25 22:19:59	—>	MattJ has joined #chef
+2015-02-25 22:20:12	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:20:13	euphy	How would I update a default attribute in a role using the chef gem?  Do I have to read all the attributes, modify the one, and then set them all?
+2015-02-25 22:20:28	<—	gojuka has quit (Quit: Lingo: www.lingoirc.com)
+2015-02-25 22:20:47	—>	tomfoolry__ has joined #chef
+2015-02-25 22:20:56	<—	plsk has quit (Quit: leaving)
+2015-02-25 22:21:15	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:21:47	—>	tomfoolry__ has joined #chef
+2015-02-25 22:22:06	<—	kaktus has left #chef
+2015-02-25 22:22:16	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:22:51	—>	tomfoolry__ has joined #chef
+2015-02-25 22:23:18	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:23:44	<—	jmickle has quit (Ping timeout: 256 seconds)
+2015-02-25 22:23:50	—>	tomfoolry__ has joined #chef
+2015-02-25 22:24:20	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:24:40	<—	Craft has quit (Ping timeout: 265 seconds)
+2015-02-25 22:24:53	—>	tomfoolry__ has joined #chef
+2015-02-25 22:25:03	<—	brianseeders has quit (Remote host closed the connection)
+2015-02-25 22:25:27	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:26:01	<—	jwieringa has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2015-02-25 22:26:02	—>	tomfoolry__ has joined #chef
+2015-02-25 22:26:29	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:27:03	—>	tomfoolry__ has joined #chef
+2015-02-25 22:27:29	<—	walker_ has quit (Quit: Textual IRC Client: www.textualapp.com)
+2015-02-25 22:27:31	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:28:03	—>	tomfoolry__ has joined #chef
+2015-02-25 22:28:04	Nick_ZWG	dirtygonzo: I've had 3 days of fun struggling with Chef's self-signed certs
+2015-02-25 22:28:20	Nick_ZWG	What does 'knife ssl check' on that client say?
+2015-02-25 22:28:34	<—	tomfoolry__ has quit (Read error: Connection reset by peer)
+2015-02-25 22:29:07	—>	tomfoolry__ has joined #chef
+2015-02-25 22:29:34	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:29:49	—>	antkong has joined #chef
+2015-02-25 22:29:55	dirtygonzo	@<Nick_ZQG>  Really?  I've only spent two days ha!  You mean knife ssl check -c ?
+2015-02-25 22:29:58	dirtygonzo	as in file?
+2015-02-25 22:30:09	—>	tomfoolry__ has joined #chef
+2015-02-25 22:30:36	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:31:07	—>	tomfoolry__ has joined #chef
+2015-02-25 22:31:29	Nick_ZWG	Assuming the standard setup, 'knife ssl check -c /etc/chef/client.rb' will do the trick
+2015-02-25 22:31:37	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:32:10	—>	tomfoolry__ has joined #chef
+2015-02-25 22:32:15	<—	szymek_ has quit (Remote host closed the connection)
+2015-02-25 22:32:24	—>	lavaman has joined #chef
+2015-02-25 22:32:25	<—	dude051 has quit (Quit: Computer has gone to sleep.)
+2015-02-25 22:33:02	—>	dpaulus has joined #chef
+2015-02-25 22:33:02	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 22:33:02	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 22:33:02	--	Channel #chef: 649 nicks (21 ops, 1 voice, 627 normals)
+2015-02-25 22:33:02	--	URL for #chef: http://www.opscode.com
+2015-02-25 22:33:02	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 22:33:07	Nick_ZWG	(that wasn't terribly helpful, I know)
+2015-02-25 22:33:11	dirtygonzo	yeah, can't imagine what it is, haven't touched it since installing the DK
+2015-02-25 22:33:36	<—	crazysix has quit (Remote host closed the connection)
+2015-02-25 22:33:39	<—	tomfoolry__ has quit (Read error: Connection reset by peer)
+2015-02-25 22:33:42	Nick_ZWG	Take a look at it and see
+2015-02-25 22:33:46	dirtygonzo	i did jus tfind something interesting...I ran "chef-client" and I got this [PB0140YS]> knife ssl check -c C:\opscode\chefdk\embedded\apps\chef\lib\chef\client.rb ERROR: CONFIGURATION ERROR:You have an error in your config file C:/opscode/chefdk/embedded/apps/chef/lib/chef/client.rb
+2015-02-25 22:33:48	Nick_ZWG	alternatively, overwrite it with 'knife configure initial'
+2015-02-25 22:34:11	—>	tomfoolry__ has joined #chef
+2015-02-25 22:34:11	dirtygonzo	it seems the chef client does not like install location of my client.rb file....even though the DK put it in that location
+2015-02-25 22:34:43	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:34:44	dirtygonzo	Sorry that did not post
+2015-02-25 22:34:51	dirtygonzo	I got this when running "chef-client" {:config_missing=>true} [2015-02-25T15:27:48-07:00] WARN: ***************************************** [2015-02-25T15:27:48-07:00] WARN: Did not find config file: C:\chef\client.rb, using command line options. [2015-02-25T15:27:48-07:00] WARN: *****************************************
+2015-02-25 22:34:52	<—	cherph has quit (Client Quit)
+2015-02-25 22:35:07	—>	lavaman1 has joined #chef
+2015-02-25 22:35:17	—>	tomfoolry__ has joined #chef
+2015-02-25 22:35:44	<—	tomfoolry__ has quit (Read error: Connection reset by peer)
+2015-02-25 22:36:15	—>	tomfoolry__ has joined #chef
+2015-02-25 22:36:25	<—	mfink_ has quit (Ping timeout: 264 seconds)
+2015-02-25 22:36:49	—>	dq86 has joined #chef
+2015-02-25 22:36:50	—>	willejs has joined #chef
+2015-02-25 22:37:03	<—	bflad has quit (Quit: Leaving...)
+2015-02-25 22:37:08	<—	lavaman has quit (Ping timeout: 272 seconds)
+2015-02-25 22:37:25	<—	aldarsior has quit (Quit: aldarsior)
+2015-02-25 22:37:46	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:37:59	<—	fedesilva has quit (Remote host closed the connection)
+2015-02-25 22:38:20	—>	tomfoolry__ has joined #chef
+2015-02-25 22:38:46	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:39:21	—>	tomfoolry__ has joined #chef
+2015-02-25 22:39:23	—>	gdanko has joined #chef
+2015-02-25 22:39:31	gdanko	hello!
+2015-02-25 22:39:48	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:39:52	gdanko	I just created a Chef 12 setup and used chef-server-ctl to create a couple of users
+2015-02-25 22:40:00	gdanko	but I cannot see any of them in the GUI
+2015-02-25 22:40:09	gdanko	though chef-server-ctl user-list shows them all
+2015-02-25 22:40:16	<—	mikel_ has quit (Ping timeout: 246 seconds)
+2015-02-25 22:40:22	—>	tomfoolry__ has joined #chef
+2015-02-25 22:40:37	—>	fedesilva has joined #chef
+2015-02-25 22:40:49	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:41:05	gdanko	I think I just found my answer.
+2015-02-25 22:41:21	—>	tomfoolry__ has joined #chef
+2015-02-25 22:41:59	—>	dpaulus has joined #chef
+2015-02-25 22:42:00	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 22:42:00	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 22:42:00	--	Channel #chef: 645 nicks (21 ops, 1 voice, 623 normals)
+2015-02-25 22:42:00	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 22:42:00	--	URL for #chef: http://www.opscode.com
+2015-02-25 22:42:20	—>	tomfoolry__ has joined #chef
+2015-02-25 22:42:53	--	irc: disconnected from server
+2015-02-25 22:43:14	—>	dpaulus has joined #chef
+2015-02-25 22:43:14	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-25 22:43:14	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-25 22:43:15	--	Channel #chef: 640 nicks (21 ops, 1 voice, 618 normals)
+2015-02-25 22:43:15	--	URL for #chef: http://www.opscode.com
+2015-02-25 22:43:15	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-25 22:43:29	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:43:45	—>	mjuszczak has joined #chef
+2015-02-25 22:44:02	—>	tomfoolry__ has joined #chef
+2015-02-25 22:44:30	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:44:39	—>	Cervator has joined #chef
+2015-02-25 22:45:03	—>	tomfoolry__ has joined #chef
+2015-02-25 22:46:05	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:46:36	<—	fujin has quit (Read error: Connection reset by peer)
+2015-02-25 22:46:39	—>	tomfoolry__ has joined #chef
+2015-02-25 22:46:51	techminer	Hi…is there a way to export Chef 12 server data and import it into a new host?
+2015-02-25 22:47:07	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:47:25	<—	tatemz has quit (Ping timeout: 244 seconds)
+2015-02-25 22:47:38	—>	tomfoolry__ has joined #chef
+2015-02-25 22:48:09	<—	tomfoolry__ has quit (Remote host closed the connection)
+2015-02-25 22:48:23	techminer	I may have broke the Chef pgsql db.  I can restore a backup but I'm worried that is not going to solve my problem.
+2015-02-25 22:49:13	--	irc: disconnected from server
+2015-02-26 10:02:02	—>	dpaulus has joined #chef
+2015-02-26 10:02:02	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-26 10:02:02	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-26 10:02:02	--	Channel #chef: 584 nicks (19 ops, 1 voice, 564 normals)
+2015-02-26 10:02:02	--	URL for #chef: http://www.opscode.com
+2015-02-26 10:02:02	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-26 10:04:07	@jonlives	ocholetras: hi!
+2015-02-26 10:04:38	@jonlives	ocholetras: i actually didn't realise that * was there at all - I don't think it should be at either end really. If you could open an issue or a PR on the repo I'll get it fixed :)
+2015-02-26 10:05:02	@jonlives	ocholetras: you will indeed get false positives like you described.
+2015-02-26 10:08:06	<—	Xzanron has quit (Ping timeout: 256 seconds)
+2015-02-26 10:09:32	—>	withnale_ has joined #chef
+2015-02-26 10:16:36	—>	willejs has joined #chef
+2015-02-26 10:17:52	<—	achanda has quit (Remote host closed the connection)
+2015-02-26 10:19:14	—>	project2501a has joined #chef
+2015-02-26 10:23:35	<—	Vanders has quit (Quit: Vanders)
+2015-02-26 10:23:36	—>	huddy has joined #chef
+2015-02-26 10:24:00	—>	Vanders has joined #chef
+2015-02-26 10:24:49	—>	legal90 has joined #chef
+2015-02-26 10:28:24	—>	jbellone has joined #chef
+2015-02-26 10:31:02	—>	intinig has joined #chef
+2015-02-26 10:31:10	—>	goncalop has joined #chef
+2015-02-26 10:33:20	<—	chris[] has quit (Ping timeout: 246 seconds)
+2015-02-26 10:36:53	—>	workmad3 has joined #chef
+2015-02-26 10:37:17	<—	leviathanch has quit (Read error: Connection reset by peer)
+2015-02-26 10:37:21	—>	cherph has joined #chef
+2015-02-26 10:38:55	<—	cherph has quit (Client Quit)
+2015-02-26 10:39:11	—>	leviathanch has joined #chef
+2015-02-26 10:39:59	kinlo	I can disable ohai plugins by putting the line OFhai::Config[:disabled_plugins] = ["GCE"] in my /etc/chef/client.rb but somehow it doesn't seem to work.  The gce plugin blocks for a timeout due to dns issues, and I can't seem to get my chef-runs to run faster this way
+2015-02-26 10:40:32	kinlo	any ideas on how to debug this?   is there a way to run ohai with certain plugins disabled to debug this first?
+2015-02-26 10:43:42	<—	yog_ has quit (Remote host closed the connection)
+2015-02-26 10:46:18	<—	willejs has quit (Quit: willejs)
+2015-02-26 10:46:34	jbellone	kinlo: Try [:GCE]
+2015-02-26 10:46:44	kinlo	isn't that exactly the same?
+2015-02-26 10:46:51	jbellone	No its different.
+2015-02-26 10:47:07	jbellone	"GCE" is a string, :GCE is a symbol.
+2015-02-26 10:47:18	kinlo	hmmmz
+2015-02-26 10:47:23	jbellone	Actually, its :Gce
+2015-02-26 10:47:31	jbellone	https://www.snip2code.com/Snippet/86850/Disable-unneccessary-ohai-plugins-to-com
+2015-02-26 10:48:26	kinlo	with GCE it seems to work
+2015-02-26 10:50:17	—>	achanda has joined #chef
+2015-02-26 10:52:40	—>	willejs has joined #chef
+2015-02-26 10:53:01	jbellone	kinlo: Cool!
+2015-02-26 10:53:54	kinlo	with :Gci it doesn't seem to work btw
+2015-02-26 10:54:11	kinlo	needs to be all caps somehow
+2015-02-26 10:54:53	@jonlives	the syntax for doing that changed slightly in ohai 7
+2015-02-26 10:55:54	kinlo	it's just hard to debug if even -l debug doesn't give a hint that the name is incorrect
+2015-02-26 10:56:48	kinlo	also no way to test it with ohai cmdline
+2015-02-26 11:00:19	—>	nlloret has joined #chef
+2015-02-26 11:00:49	nlloret	Hi everyone.
+2015-02-26 11:01:31	ocholetras	jonlives soy only delete the  "*"
+2015-02-26 11:01:34	<—	zuhaib has quit (Ping timeout: 265 seconds)
+2015-02-26 11:01:35	@jonlives	ocholetras: right
+2015-02-26 11:01:50	—>	MattMaker has joined #chef
+2015-02-26 11:02:06	<—	piloophaz has quit (Ping timeout: 246 seconds)
+2015-02-26 11:02:28	@jonlives	kinlo: basically ohai 7 introduced the "Ohai.plugin(:Name)" block in plugin files (http://radar.oreilly.com/2014/04/ohai-new-ohai-plugins.html) - it's that name that you need to specify in disabled plugins in ohai 7 and newer.
+2015-02-26 11:03:24	—>	zuhaib has joined #chef
+2015-02-26 11:03:26	@jonlives	kinlo: the thing is the old format name of 'gce' isn't causing an error, it just doesn't match the name of the plugin, which is :GCE, per https://github.com/chef/ohai/blob/master/lib/ohai/plugins/gce.rb#L19
+2015-02-26 11:03:31	<—	sahilsk has left #chef
+2015-02-26 11:03:34	ocholetras	jonlives: think you dont use preflight too much on your workflow, right? Other way you will be aware about those false positives...
+2015-02-26 11:03:49	@jonlives	ocholetras: we do, we just don't use the foo_apache naming pattern so never hit it :)
+2015-02-26 11:08:04	—>	jedi4ever has joined #chef
+2015-02-26 11:08:20	<—	jedi4ever has quit (Client Quit)
+2015-02-26 11:08:53	—>	Philipp__ has joined #chef
+2015-02-26 11:12:15	—>	tkuchiki has joined #chef
+2015-02-26 11:13:35	—>	gfawcettpq has joined #chef
+2015-02-26 11:16:17	—>	fedesilva has joined #chef
+2015-02-26 11:16:39	—>	a_ro_ has joined #chef
+2015-02-26 11:17:04	<—	achanda has quit (Remote host closed the connection)
+2015-02-26 11:17:08	<—	a_ro_ has left #chef
+2015-02-26 11:17:21	<—	MattMaker has quit (Remote host closed the connection)
+2015-02-26 11:19:19	<—	Vanders has quit (Quit: Vanders)
+2015-02-26 11:21:56	ocholetras	jonlives: he he we have that issues with our wrapper cookbooks
+2015-02-26 11:22:04	<—	jgrevich has quit (Quit: jgrevich)
+2015-02-26 11:22:10	ocholetras	i.e. company_apache2 that wrapps apache2 from community
+2015-02-26 11:22:15	ocholetras	and so on..
+2015-02-26 11:22:16	@jonlives	ocholetras: just merged your fix and pushed out an updated version :)
+2015-02-26 11:22:34	ocholetras	jonlives: thanks!
+2015-02-26 11:23:32	@jonlives	np :)
+2015-02-26 11:23:50	ocholetras	btw you dont use wrapper cookbooks?
+2015-02-26 11:24:10	ocholetras	i think you use application cookbook that uses community ones directly?
+2015-02-26 11:24:46	—>	vanz has joined #chef
+2015-02-26 11:26:47	rmoriz	hi
+2015-02-26 11:26:57	rmoriz	what's the 2015 status of provisioning macs with chef? ;)
+2015-02-26 11:27:26	rmoriz	especially "headless" macs that are going to be used for CI purposes (XCode and stuff)
+2015-02-26 11:27:53	jbellone	rmoriz: You're booting them on VMware?
+2015-02-26 11:28:12	rmoriz	jbellone: is that required?
+2015-02-26 11:29:23	—>	dpaulus has joined #chef
+2015-02-26 11:29:23	--	Topic for #chef is "Chef Client 12.0.0 http://bit.ly/chefclient1200 | Chef Server 12.0.3 http://bit.ly/chefsrv1203 | http://chef.io/chef/install | http://docs.chef.io | http://lists.opscode.com | https://supermarket.chef.io | http://status.chef.io | IRC Logs: https://botbot.me/freenode/chef"
+2015-02-26 11:29:23	--	Topic set by nathenharvey (~nathenhar@c-73-163-132-222.hsd1.md.comcast.net) on Thu, 19 Feb 2015 15:15:53
+2015-02-26 11:29:23	--	Channel #chef: 591 nicks (19 ops, 1 voice, 571 normals)
+2015-02-26 11:29:23	--	URL for #chef: http://www.opscode.com
+2015-02-26 11:29:23	--	Channel created on Thu, 09 Oct 2008 20:36:22
+2015-02-26 11:29:49	rmoriz	jbellone: we have some colocated mac minis @ datacenter. afaik the team can re-install them manually for us. however we don't really want to run everything in a VM on top for speed (we currently do)
+2015-02-26 11:30:08	—>	ravibhure1 has joined #chef
+2015-02-26 11:31:08	jbellone	rmoriz: I see. Someone brought this up to me the other day for similar reasons (builds for iPhone/Apple TV)
+2015-02-26 11:31:08	vanz	Hi! I am trying to install chef-provisioning gem using the embedded gem in chef. But the following error happends: https://gist.github.com/guilhermesft/6fc00b6525b11699c802. If I use the "normal" gem I can install the chef-provisioning without toubles.
+2015-02-26 11:32:09	vanz	how you can see in the gist, is a compiler error in a dependency.
+2015-02-26 11:32:10	rmoriz	jbellone: running multiple jenkins-slaves under different osx users should work without having to virtualize everything. However it does limit the flexibility in different versions
+2015-02-26 11:32:39	<—	johnrp has quit (Read error: Connection reset by peer)
+2015-02-26 11:32:41	<—	ravibhure has quit (Ping timeout: 256 seconds)
+2015-02-26 11:33:06	jbellone	rmoriz: I think that's what they do now - probably similar to your setup.
+2015-02-26 11:33:36	—>	xofer has joined #chef
+2015-02-26 11:34:50	—>	johnrp has joined #chef
+2015-02-26 11:34:50	—>	otter768 has joined #chef
+2015-02-26 11:35:13	rmoriz	jbellone: okay, thanks!
+2015-02-26 11:35:59	—>	solvip has joined #chef
+2015-02-26 11:36:27	jbellone	rmoriz: If it helps I think there's been some work on using Chef to provision workstations. https://github.com/opscode-cookbooks/pantry
+2015-02-26 11:36:47	<—	ajaiswal has quit (Quit: Leaving)
+2015-02-26 11:39:11	jbellone	rmoriz: jtimberman would be the man to talk to about that.
+2015-02-26 11:39:20	rmoriz	jbellone: ok thanks :)
+2015-02-26 11:39:27	<—	otter768 has quit (Ping timeout: 244 seconds)
+2015-02-26 11:43:52	<—	solvip has quit (Ping timeout: 240 seconds)
+2015-02-26 11:45:50	—>	Vanders has joined #chef
+2015-02-26 11:45:56	<—	praneshv1 has quit (Quit: Leaving.)
+2015-02-26 11:48:03	<—	intinig has quit (Remote host closed the connection)
+2015-02-26 11:48:18	—>	tymik has joined #chef
+2015-02-26 11:48:58	<—	yfeldblum has quit (Ping timeout: 256 seconds)
+2015-02-26 11:48:59	—>	intinig has joined #chef
+2015-02-26 11:50:41	tymik	hello, i'd like to ask a short question that i haven't quickly found an answer: is chef able to summon a brand new virtual machine just like vagrant does or would I need to use them both paralelly?
+2015-02-26 11:54:14	—>	rockpapergoat has joined #chef
+2015-02-26 11:55:12	<—	halorgium has quit (Ping timeout: 256 seconds)
+2015-02-26 11:56:57	<—	xofer has quit (Ping timeout: 245 seconds)
+2015-02-26 11:57:19	<—	intinig has quit (Ping timeout: 245 seconds)
+2015-02-26 11:58:15	workmad3	tymik: you'd typically use both... but you can do things like set up chef on the host with recipes that can spin-up new VMs using vagrant/virtualbox/etc based on conditions in the recipe, and those new VMs can then be managed with separate chef cookbooks
+2015-02-26 11:59:02	<—	patcon has quit (Ping timeout: 245 seconds)
+2015-02-26 11:59:05	<—	rockpapergoat has quit (Ping timeout: 265 seconds)
+2015-02-26 11:59:16	—>	yfeldblum has joined #chef
+2015-02-26 12:00:19	tymik	workmad3: thank you :)
+2015-02-26 12:02:19	—>	jsm has joined #chef
+2015-02-26 12:02:20	—>	alterm4n_ has joined #chef
+2015-02-26 12:03:06	—>	godzillaenlacasa has joined #chef
+2015-02-26 12:03:44	<—	jbellone has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2015-02-26 12:05:11	<—	alterm4nn has quit (Ping timeout: 250 seconds)
+2015-02-26 12:09:44	<—	MattJ has quit (Ping timeout: 252 seconds)
+2015-02-26 12:11:28	—>	alexmoore has joined #chef
+2015-02-26 12:12:09	—>	rodolfojcj has joined #chef
+2015-02-26 12:16:38	—>	intinig has joined #chef
+2015-02-26 12:17:53	<—	chip has quit (Ping timeout: 245 seconds)
+2015-02-26 12:17:58	—>	MattMaker has joined #chef
+2015-02-26 12:18:21	—>	solvip has joined #chef
+2015-02-26 12:18:54	<—	willejs has quit (Quit: willejs)
+2015-02-26 12:19:05	<—	nlloret has quit (Quit: Konversation terminated!)
+2015-02-26 12:20:06	—>	poops3 has joined #chef
+2015-02-26 12:21:40	--	LeShadow is now known as LeShadowAFK
+2015-02-26 12:23:04	<—	MattMaker has quit (Ping timeout: 255 seconds)
+2015-02-26 12:23:15	—>	chip-- has joined #chef
+2015-02-26 12:23:23	<—	poops has quit (Ping timeout: 250 seconds)
+2015-02-26 12:23:45	<—	godzillaenlacasa has quit (Quit: Computer has gone to sleep.)
+2015-02-26 12:23:49	<—	poops2 has quit (Ping timeout: 250 seconds)
+2015-02-26 12:24:17	—>	rcrowley has joined #chef
+2015-02-26 12:24:20	—>	poops has joined #chef
+2015-02-26 12:26:06	—>	willejs has joined #chef
+2015-02-26 12:29:22	<—	solvip has quit (Ping timeout: 240 seconds)
+2015-02-26 12:32:28	<—	rodolfojcj has quit (Ping timeout: 252 seconds)
+2015-02-26 12:33:50	<—	willejs has quit (Quit: willejs)
+2015-02-26 12:34:43	<—	tymik has left #chef
+2015-02-26 12:38:03	—>	cherph has joined #chef
+2015-02-26 12:39:32	—>	Gnut has joined #chef
+2015-02-26 12:40:05	<—	cherph has quit (Client Quit)
+2015-02-26 12:42:06	—>	diegows has joined #chef
+2015-02-26 12:43:59	—>	willejs has joined #chef
+2015-02-26 12:44:05	<—	Gnut has quit (Ping timeout: 256 seconds)
+2015-02-26 12:46:08	dpaulus	jonlives: I've just noticed there seems to be a , instead of an . in the latest version tag from knife-spork.
+2015-02-26 12:47:01	—>	GentileBen has joined #chef

@@ -1,0 +1,152 @@
+2015-02-25 15:50:40	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 15:50:40		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 15:51:09		fifo: pipe closed
+2015-02-25 15:56:20	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 15:56:20		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 15:56:40		fifo: pipe closed
+2015-02-25 16:01:17	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 16:01:17		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 16:34:35		fifo: pipe closed
+2015-02-25 16:34:40	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 16:34:40		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 16:35:16		fifo: pipe closed
+2015-02-25 16:35:47	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 16:35:47		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 16:36:35		fifo: pipe closed
+2015-02-25 16:47:15	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 16:47:15		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 16:47:34	=!=	Error: unknown command "/test" (type /help for help)
+2015-02-25 16:47:59		fifo: pipe closed
+2015-02-25 16:48:30	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 16:48:30		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 16:49:34		fifo: pipe closed
+2015-02-25 21:40:33	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 21:40:33		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 21:40:43		fifo: pipe closed
+2015-02-25 21:42:08	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 21:42:08		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 21:47:44		fifo: pipe closed
+2015-02-25 21:47:48	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 21:47:48		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 21:49:05		fifo: pipe closed
+2015-02-25 21:50:41	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 21:50:41		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 22:04:23		fifo: pipe closed
+2015-02-25 22:09:54	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 22:09:54		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 22:32:35		fifo: pipe closed
+2015-02-25 22:32:49	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 22:32:49		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 22:41:34	=!=	Error with command "/query" (help on command: /help query)
+2015-02-25 22:41:38		fifo: pipe closed
+2015-02-25 22:41:43	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 22:41:43		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 22:51:00	=!=	irc: currently connecting to server "freenode"!
+2015-02-25 22:51:00	=!=	Error with command "/connect" (help on command: /help connect)
+2015-02-25 22:51:11		fifo: pipe closed
+2015-02-25 22:51:15	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-25 22:51:15		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-25 22:51:28		fifo: pipe closed
+2015-02-26 10:01:48	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-26 10:01:48		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2015-02-26 10:42:13		Option "irc.look.smart_filter":
+2015-02-26 10:42:13		  description: filter join/part/quit/nick messages for a nick if not speaking for some minutes on channel (you must create a filter on tag "irc_smart_filter")
+2015-02-26 10:42:13		  type: boolean
+2015-02-26 10:42:13		  values: on, off
+2015-02-26 10:42:13		  default value: on
+2015-02-26 10:42:13		  current value: on
+2015-02-26 10:43:36		Filter "joinquit" added:
+2015-02-26 10:43:36		  [joinquit] buffer: * / tags: irc_join,irc_part,irc_quit / regex: * 
+2015-02-26 11:06:30		[script]  /script  list [-o|-i]
+2015-02-26 11:06:30		                   search <text>
+2015-02-26 11:06:30		                   show <script>
+2015-02-26 11:06:30		                   load|unload|reload <script> [<script>...]
+2015-02-26 11:06:30		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2015-02-26 11:06:30		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2015-02-26 11:06:30		                   upgrade
+2015-02-26 11:06:30		                   update
+2015-02-26 11:06:30		WeeChat scripts manager
+2015-02-26 11:06:30		          list: list loaded scripts (all languages)
+2015-02-26 11:06:30		            -o: send list of loaded scripts to buffer
+2015-02-26 11:06:30		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2015-02-26 11:06:30		        search: search scripts by tags or text and display result on scripts buffer
+2015-02-26 11:06:30		          show: show detailed info about a script
+2015-02-26 11:06:30		          load: load script(s)
+2015-02-26 11:06:30		        unload: unload script(s)
+2015-02-26 11:06:30		        reload: reload script(s)
+2015-02-26 11:06:30		      autoload: autoload the script
+2015-02-26 11:06:30		    noautoload: do not autoload the script
+2015-02-26 11:06:30		toggleautoload: toggle autoload
+2015-02-26 11:06:30		       install: install/upgrade script(s)
+2015-02-26 11:06:30		        remove: remove script(s)
+2015-02-26 11:06:30		 installremove: install or remove script(s), depending on current state
+2015-02-26 11:06:30		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2015-02-26 11:06:30		            -q: quiet mode: do not display messages
+2015-02-26 11:06:30		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2015-02-26 11:06:30		        update: update local scripts cache
+2015-02-26 11:06:30		Without argument, this command opens a buffer with list of scripts.
+2015-02-26 11:06:30		On script buffer, the possible status for each script are:
+2015-02-26 11:06:30		  * i a H r N
+2015-02-26 11:06:30		  | | | | | |
+2015-02-26 11:06:30		  | | | | | obsolete (new version available)
+2015-02-26 11:06:30		  | | | | running (loaded)
+2015-02-26 11:06:30		  | | | held
+2015-02-26 11:06:30		  | | autoloaded
+2015-02-26 11:06:30		  | installed
+2015-02-26 11:06:30		  popular script
+2015-02-26 11:06:30		Keys on script buffer:
+2015-02-26 11:06:30		  alt+i  install script
+2015-02-26 11:06:30		  alt+r  remove script
+2015-02-26 11:06:30		  alt+l  load script
+2015-02-26 11:06:30		  alt+L  reload script
+2015-02-26 11:06:30		  alt+u  unload script
+2015-02-26 11:06:30		  alt+A  autoload script
+2015-02-26 11:06:30		  alt+h  (un)hold script
+2015-02-26 11:06:30		  alt+v  view script
+2015-02-26 11:06:30		Input allowed on script buffer:
+2015-02-26 11:06:30		  i/r/l/L/u/h  action on script (same as keys above)
+2015-02-26 11:06:30		  q            close buffer
+2015-02-26 11:06:30		  $            refresh buffer
+2015-02-26 11:06:30		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2015-02-26 11:06:30		  s:           reset sort (use default sort)
+2015-02-26 11:06:30		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2015-02-26 11:06:30		  *            remove filter
+2015-02-26 11:06:30		Mouse actions on script buffer:
+2015-02-26 11:06:30		  wheel         scroll list
+2015-02-26 11:06:30		  left button   select script
+2015-02-26 11:06:30		  right button  install/remove script
+2015-02-26 11:06:30		Examples:
+2015-02-26 11:06:30		  /script search url
+2015-02-26 11:06:30		  /script install iset.pl buffers.pl
+2015-02-26 11:06:30		  /script remove iset.pl
+2015-02-26 11:06:30		  /script hold urlserver.py
+2015-02-26 11:06:30		  /script reload urlserver
+2015-02-26 11:06:30		  /script upgrade
+2015-02-26 11:08:38		script: downloading list of scripts...
+2015-02-26 11:08:44		script: 279 scripts for WeeChat 1.0.1
+2015-02-26 11:08:44		script: script "https://weechat.org/files/temp/theme/theme.py" not found
+2015-02-26 11:09:12		Scripts loaded:
+2015-02-26 11:09:12		  (none)
+2015-02-26 11:10:11		python: loading script "/home/user/.weechat/python/bandwidth.py"
+2015-02-26 11:10:11		python: registered script "bandwidth", version 1.0 (Displays network interface bandwidth (KiB/s and MiB/s) on a bar)
+2015-02-26 11:19:22		python: loading script "/home/user/.weechat/python/theme.py"
+2015-02-26 11:19:22		python: registered script "theme", version 0.1-dev (WeeChat theme manager)
+2015-02-26 11:19:22		Theme saved to "/home/user/.weechat/themes/_backup.theme"
+2015-02-26 11:19:48		theme: action "list" not developed
+2015-02-26 11:20:43		theme: action "install" not developed
+2015-02-26 11:22:40		Theme saved to "/home/user/.weechat/themes/_undo.theme"
+2015-02-26 11:22:40		Theme "/home/user/.weechat/themes/doebi.theme" installed (116 options set)
+2015-02-26 11:25:48		Theme saved to "/home/user/.weechat/themes/_undo.theme"
+2015-02-26 11:25:48		Theme "/home/user/.weechat/themes/deltafire.theme" installed (116 options set)
+2015-02-26 11:26:57		Theme saved to "/home/user/.weechat/themes/_undo.theme"
+2015-02-26 11:26:57		Theme "/home/user/.weechat/themes/fbesser.theme" installed (116 options set)
+2015-02-26 11:27:30		Theme saved to "/home/user/.weechat/themes/_undo.theme"
+2015-02-26 11:27:30		Theme "/home/user/.weechat/themes/_undo.theme" installed (118 options set)
+2015-02-26 11:27:48		Theme saved to "/home/user/.weechat/themes/_undo.theme"
+2015-02-26 11:27:48		Error loading theme "/home/user/.weechat/themes/_backup.theme\"
+2015-02-26 11:27:51		Theme saved to "/home/user/.weechat/themes/_undo.theme"
+2015-02-26 11:27:51		Theme "/home/user/.weechat/themes/_backup.theme" installed (118 options set)
+2015-02-26 11:28:49		fifo: pipe closed
+2015-02-26 11:29:07	=!=	fifo: unable to create pipe for remote control (/home/user/.weechat/weechat_fifo_1): error 1 Operation not permitted
+2015-02-26 11:29:07		script: 279 scripts for WeeChat 1.0.1
+2015-02-26 11:29:07		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer

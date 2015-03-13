@@ -1,5 +1,5 @@
 " color
-colorscheme Tomorrow-Night-Bright
+colorscheme molokai
 " display the current mode
 set showmode
 " a tab is 4 spaces
@@ -10,3 +10,5 @@ set shiftwidth=2
 set anti enc=utf-8
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 let g:airline_powerline_fonts=1
+" set airline theme
+AirlineTheme molokai

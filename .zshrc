@@ -39,3 +39,8 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin/:$PATH"
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Boot2docker
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/dpaulus/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1

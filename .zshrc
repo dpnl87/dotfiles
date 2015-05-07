@@ -48,5 +48,6 @@ export DOCKER_TLS_VERIFY=1
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 # virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source $HOMEBREW_ROOT/bin/virtualenvwrapper.sh
+WRAPPER_PATH=$HOMEBREW_ROOT/bin/virtualenvwrapper.sh
+[ -f ~/.virtualenvs ] && export WORKON_HOME=~/.virtualenvs
+[ -f $WRAPPER_PATH  ] && source $WRAPPER_PATH

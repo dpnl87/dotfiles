@@ -14,3 +14,5 @@ let g:airline_powerline_fonts=1
 AirlineTheme molokai
 " enable spellcheck for .md files
 autocmd BufRead,BufNewFile *.md setlocal spell
+" Set 80 line color
+set colorcolumn=80
